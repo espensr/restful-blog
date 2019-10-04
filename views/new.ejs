@@ -1,0 +1,25 @@
+<% include ./partials/header %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">New Blog</div>
+    <form class="ui form" action="/blogs" method="POST">
+        <div class="field">
+            <label>Title</label>
+            <input type="text" name="blog[title]" placeholder="title">
+        </div>
+        <div class="field">
+            <label>Image Url</label>
+            <input type="text" name="blog[image]" placeholder="https://test.jpg">
+        </div>
+        <div class="field">
+            <label>
+                Blog Content
+                <span data-position="top left" data-tooltip="<p> paragraph </p>, <h(1-6)> header </h(1-6)>, plain text"><i class="question circle outline icon"></i></dspaniv>
+            </label>
+            <textarea name="blog[body]" placeholder="<p> paragraph </p>, <h(1-6)> header </h(1-6)>, plain text"></textarea>
+        </div>
+        <input class="ui primary big basic button" type="submit" value="Submit">
+    </form>
+</div>
+
+<% include ./partials/footer %>
